@@ -1,0 +1,23 @@
+version: '3'
+services:
+  backup-manager:
+    image: mmmaxwwwell/backup-manager
+    container_name: backup-manager
+    restart: always
+    volumes:
+      - ./appdata/local_backup:/home/node/app/local_backup
+      - ./appdata/backup_source:/home/node/app/backup_source
+      - ./appdata/storage:/home/node/app/storage
+    env_file:
+      - ./settings/backup-manager.env
+  se-server:
+    image: mmmaxwwwell/space-engineers-dedicated-docker-linux:latest
+    container_name: ${BASEDIR}_space-engineers-dedicated-docker-linux
+    restart: always
+    volumes:
+      - ./appdata/space-engineers/World:/appdata/space-engineers/World
+      - ./appdata/space-engineers/SpaceEngineersDedicated:/appdata/space-engineers/SpaceEngineersDedicated
+      - ./appdata/space-engineers/steamcmd:/root/.steam
+      - ./appdata/space-engineers/SpaceEngineers-Dedicated.cfg:/appdata/space-engineers/SpaceEngineersDedicated/SpaceEngineers-Dedicated.cfg
+    ports:
+     - "27016:27016/udp"
