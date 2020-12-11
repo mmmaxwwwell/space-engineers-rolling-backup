@@ -6,8 +6,8 @@ services:
     restart: always
     volumes:
       - ./appdata/backup-manager/local_backup:/home/node/app/local_backup
-      - ./appdata/space-engineers:/home/node/app/backup_source
       - ./appdata/backup-manager/storage:/home/node/app/storage
+      - ./appdata/space-engineers:/home/node/app/backup_source
     env_file:
       - ./settings/backup-manager.env
   se-server:
