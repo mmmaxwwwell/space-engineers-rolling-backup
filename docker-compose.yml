@@ -5,14 +5,14 @@ services:
     container_name: backup-manager
     restart: always
     volumes:
-      - ./appdata/local_backup:/home/node/app/local_backup
-      - ./appdata/backup_source:/home/node/app/backup_source
-      - ./appdata/storage:/home/node/app/storage
+      - ./appdata/backup-manager/local_backup:/home/node/app/local_backup
+      - ./appdata/space-engineers:/home/node/app/backup_source
+      - ./appdata/backup-manager/storage:/home/node/app/storage
     env_file:
       - ./settings/backup-manager.env
   se-server:
     image: mmmaxwwwell/space-engineers-dedicated-docker-linux:latest
-    container_name: ${BASEDIR}_space-engineers-dedicated-docker-linux
+    container_name: space-engineers-bobber_space-engineers-dedicated-docker-linux
     restart: always
     volumes:
       - ./appdata/space-engineers/World:/appdata/space-engineers/World
