@@ -1,6 +1,6 @@
 #!/bin/bash
 mkdir -p appdata/space-engineers/config/World
 mkdir -p appdata/space-engineers/bins/SpaceEngineersDedicated
-mkdir -p appdata/space-engineers/steamcmd
+mkdir -p appdata/space-engineers/bins/steamcmd
 mkdir -p appdata/backup-manager/local_backup
 mkdir -p appdata/backup-manager/storage
