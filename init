@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 mkdir -p appdata/space-engineers/config/World
 mkdir -p appdata/space-engineers/bins/SpaceEngineersDedicated
 mkdir -p appdata/space-engineers/steamcmd
